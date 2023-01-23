@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         // В параметре указываем количество потоков, которые должны обработать задачу
         // Задача 1:
-        // runStream(2);
+//         runStream(2);
         runStream(6);
     }
 
@@ -26,7 +26,7 @@ public class Main {
                 throw new RuntimeException(ex);
             }
         });
-
+        System.out.println("Total number of items: "+MyThread.count);
         System.out.println("Program Execution Time with " + listAllThreads.size() + " Threads: "
                 + (System.currentTimeMillis() - start) + "\n");
     }
